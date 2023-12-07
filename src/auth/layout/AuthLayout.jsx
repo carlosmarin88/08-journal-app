@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
 
-export const AuthLayaout = ({ children, title }) => {
+export const AuthLayout = ({ children, title }) => {
     return (
         <Grid
             container
