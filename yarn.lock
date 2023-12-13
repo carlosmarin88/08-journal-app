@@ -669,6 +669,16 @@
   resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha1-a3kDLnYKCJnNQgRxC+7elyo6GF8=
 
+"@reduxjs/toolkit@^2.0.1":
+  version "2.0.1"
+  resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/@reduxjs/toolkit/-/toolkit-2.0.1.tgz#0a5233c1e35c1941b03aece39cceade3467a1062"
+  integrity sha1-ClIzweNcGUGwOuzjnM6t40Z6EGI=
+  dependencies:
+    immer "^10.0.3"
+    redux "^5.0.0"
+    redux-thunk "^3.1.0"
+    reselect "^5.0.1"
+
 "@remix-run/router@1.13.1":
   version "1.13.1"
   resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/@remix-run/router/-/router-1.13.1.tgz#07e2a8006f23a3bc898b3f317e0a58cc8076b86e"
@@ -804,6 +814,11 @@
   version "0.16.8"
   resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/@types/scheduler/-/scheduler-0.16.8.tgz#ce5ace04cfeabe7ef87c0091e50752e36707deff"
   integrity sha1-zlrOBM/qvn74fACR5QdS42cH3v8=
+
+"@types/use-sync-external-store@^0.0.3":
+  version "0.0.3"
+  resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz#b6725d5f4af24ace33b36fafd295136e75509f43"
+  integrity sha1-tnJdX0rySs4zs2+v0pUTbnVQn0M=
 
 "@ungap/structured-clone@^1.2.0":
   version "1.2.0"
@@ -1620,6 +1635,11 @@ ignore@^5.2.0:
   resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/ignore/-/ignore-5.3.0.tgz#67418ae40d34d6999c95ff56016759c718c82f78"
   integrity sha1-Z0GK5A001pmclf9WAWdZxxjIL3g=
 
+immer@^10.0.3:
+  version "10.0.3"
+  resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/immer/-/immer-10.0.3.tgz#a8de42065e964aa3edf6afc282dfc7f7f34ae3c9"
+  integrity sha1-qN5CBl6WSqPt9q/Cgt/H9/NK48k=
+
 import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
@@ -2156,6 +2176,14 @@ react-is@^18.2.0:
   resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha1-GZQx7qqi4J+GQn77tPFHPttHYJs=
 
+react-redux@^9.0.4:
+  version "9.0.4"
+  resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/react-redux/-/react-redux-9.0.4.tgz#6892d465f086507a517d4b53eb589876e6bc8344"
+  integrity sha1-aJLUZfCGUHpRfUtT61iYdua8g0Q=
+  dependencies:
+    "@types/use-sync-external-store" "^0.0.3"
+    use-sync-external-store "^1.0.0"
+
 react-refresh@^0.14.0:
   version "0.14.0"
   resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
@@ -2193,6 +2221,16 @@ react@^18.2.0:
   dependencies:
     loose-envify "^1.1.0"
 
+redux-thunk@^3.1.0:
+  version "3.1.0"
+  resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/redux-thunk/-/redux-thunk-3.1.0.tgz#94aa6e04977c30e14e892eae84978c1af6058ff3"
+  integrity sha1-lKpuBJd8MOFOiS6uhJeMGvYFj/M=
+
+redux@^5.0.0:
+  version "5.0.0"
+  resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/redux/-/redux-5.0.0.tgz#29572e29a439e094ff8fec46883fc45053f6736d"
+  integrity sha1-KVcuKaQ54JT/j+xGiD/EUFP2c20=
+
 reflect.getprototypeof@^1.0.4:
   version "1.0.4"
   resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/reflect.getprototypeof/-/reflect.getprototypeof-1.0.4.tgz#aaccbf41aca3821b87bb71d9dcbc7ad0ba50a3f3"
@@ -2218,6 +2256,11 @@ regexp.prototype.flags@^1.5.0, regexp.prototype.flags@^1.5.1:
     call-bind "^1.0.2"
     define-properties "^1.2.0"
     set-function-name "^2.0.0"
+
+reselect@^5.0.1:
+  version "5.0.1"
+  resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/reselect/-/reselect-5.0.1.tgz#587cdaaeb4e0e8927cff80ebe2bbef05f74b1648"
+  integrity sha1-WHzarrTg6JJ8/4Dr4rvvBfdLFkg=
 
 resolve-from@^4.0.0:
   version "4.0.0"
@@ -2524,6 +2567,11 @@ uri-js@^4.2.2:
   integrity sha1-mxpSWVIlhZ5V9mnZKPiMbFfyp34=
   dependencies:
     punycode "^2.1.0"
+
+use-sync-external-store@^1.0.0:
+  version "1.2.0"
+  resolved "https://pkgs.dev.azure.com/albatross-getnet/_packaging/albatross-artifacts/npm/registry/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha1-fb79bvP+TnZ6DPXXKHqs+1hGkoo=
 
 vite@^5.0.0:
   version "5.0.5"
