@@ -1,13 +1,15 @@
 import { Link as RouterLink } from 'react-router-dom'
 import { Button, Grid, Link, TextField, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { AuthLayout } from '../layout/AuthLayout'
 import { useForm } from '../../hooks'
+import { useDispatch } from 'react-redux'
+import { startCreatingUserWithEmailPassword } from '../../store/auth/thunks'
 
 const formData = {
-    email: 'charly@google.com',
-    password: '123456',
-    displayName: 'Carlos Marin'
+    email: '',
+    password: '',
+    displayName: ''
 }
 
 const formValidations = {
@@ -19,16 +21,26 @@ const formValidations = {
 
 export const RegisterPage = () => {
 
+    const dispatch = useDispatch()
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
     const { displayName, email, password, onInputChange, formState,
         displayNameValid, emailValid, passwordValid, isFormValid } = useForm(formData, formValidations);
 
+    
     const onSubmit = (event) => {
         event.preventDefault();
+        setFormSubmitted(true);
+        
+        if(!isFormValid) return;
+
         console.log(formState);
+        dispatch(startCreatingUserWithEmailPassword(formState));
     }
 
     return (
         <AuthLayout title='Login'>
+            <h1>FormValid: {isFormValid ? 'Válido' : 'Incorrecto'}</h1>
             <form onSubmit={onSubmit}>
                 <Grid container>
                     <Grid item xs={12} sx={{ mt: 2 }}>
@@ -39,7 +51,7 @@ export const RegisterPage = () => {
                             fullWidth
                             name='displayName'
                             value={displayName}
-                            error={!displayNameValid}
+                            error={!!displayNameValid && formSubmitted}
                             helperText={displayNameValid}
                             onChange={onInputChange} /> {/** ocupar todo el ancho posible */}
                     </Grid>
@@ -51,6 +63,8 @@ export const RegisterPage = () => {
                             fullWidth
                             name='email'
                             value={email}
+                            error={!!emailValid && formSubmitted}
+                            helperText={emailValid}
                             onChange={onInputChange} /> {/** ocupar todo el ancho posible */}
                     </Grid>
                     <Grid item xs={12} sx={{ mt: 2 }}>
@@ -61,6 +75,8 @@ export const RegisterPage = () => {
                             fullWidth
                             name='password'
                             value={password}
+                            error={!!passwordValid && formSubmitted}
+                            helperText={passwordValid}
                             onChange={onInputChange} /> {/** ocupar todo el ancho posible */}
                     </Grid>
                     <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
