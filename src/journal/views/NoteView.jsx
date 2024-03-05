@@ -23,7 +23,7 @@ export const NoteView = () => {
     const fileInputRef = useRef()
 
     useEffect(() => {
-        console.log(formState)
+        //console.log(formState)
         dispatch(setActiveNote(formState))
     }, [formState])
 
