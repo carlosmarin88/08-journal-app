@@ -12,7 +12,7 @@ export const startGoogleSignIn = () => {
     return async(dispatch) => {
         dispatch(checkingCredentials());
         const resp = await signInWithGoogle();
-        console.log({result: resp})
+        //console.log({resp})
         if(!resp.ok) return dispatch(logout({errorMessage: resp.errorMessage}));
         dispatch(login(resp))
     }
@@ -32,7 +32,7 @@ export const startLoginWithEmailPassword = (email, password) => {
     return async(dispatch) => {
         dispatch(checkingCredentials());
         const resp = await loginWithEmailPassword(email, password);
-        console.log(resp);
+        //console.log(resp);
         if(!resp.ok) return dispatch(logout({errorMessage: resp.errorMessage}));
         dispatch(login(resp));       
     }
