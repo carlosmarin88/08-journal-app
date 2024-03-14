@@ -21,10 +21,10 @@ export const startNewNote = () => {
         }
         const newDoc = doc(collection(FirebaseDB, `${uid}/journal/notes`) )
         const resp = await setDoc(newDoc, newNote);
-        console.log({
+        /*console.log({
             newDoc,
             resp
-        })
+        })*/
         newNote.id = newDoc.id
         dispatch(addNewEmptyNote(newNote));
         dispatch(setActiveNote(newNote));
