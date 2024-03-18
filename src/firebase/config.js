@@ -17,15 +17,6 @@ import { getEnviroments } from "../helpers";
 //   appId: "1:1084853504802:web:e15baae832dc8e27adf37b",
 // };
 
-const {
-VITE_APIKEY,
-VITE_AUTH_DOMIAN,
-VITE_PROJECT_ID,
-VITE_STORAGE_BUCKET,
-VITE_MESSAGING_SENDER_ID,
-VITE_APP_ID,
-VITE_MEASUREMENT_ID
-} = getEnviroments();
 
 // Testing
 // const firebaseConfig = {
@@ -37,6 +28,17 @@ VITE_MEASUREMENT_ID
 //   appId: "1:520182608458:web:b7bedb4371e5b58ba06cb3",
 //   measurementId: "G-K273PVWET5"
 // };
+
+const {
+VITE_APIKEY,
+VITE_AUTH_DOMIAN,
+VITE_PROJECT_ID,
+VITE_STORAGE_BUCKET,
+VITE_MESSAGING_SENDER_ID,
+VITE_APP_ID,
+VITE_MEASUREMENT_ID
+} = getEnviroments();
+
 
  const firebaseConfig = {
    apiKey: VITE_APIKEY,
