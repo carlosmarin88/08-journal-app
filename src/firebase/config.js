@@ -51,7 +51,7 @@ VITE_MEASUREMENT_ID
 
   if(typeof VITE_MEASUREMENT_ID !== undefined) firebaseConfig.measurementId = VITE_MEASUREMENT_ID;
 
-  console.log('firebaseConfig', firebaseConfig);
+  //console.log('firebaseConfig', firebaseConfig);
 
 // Initialize Firebase
 export const FirebaseApp = initializeApp(firebaseConfig)
